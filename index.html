@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitab Hadis</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tambahkan ini di dalam <head> -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Halaman Utama: Daftar Kitab Hadits -->
+    <div id="mainPage">
+      <h1>Daftar Kitab Hadis</h1>
+      <div class="container" id="bookContainer">
+        Memuat data kitab hadits...
+      </div>
+    </div>
+
+    <!-- Halaman Kedua: Menampilkan Hadits -->
+    <div id="hadithPage">
+      <span class="back-btn" onclick="goBack()">&larr; Kembali</span>
+
+      <div class="hadith-header">
+        <div class="hadith-title-left" id="arabicTitle">صحيح البخاري</div>
+        <div class="hadith-title-right" id="bookTitle"></div>
+      </div>
+
+      <!-- Form Pencarian Nomor Hadits + Subtitle -->
+      <div class="subtitle-search-container">
+        <div class="hadith-subtitle" id="hadithSubtitle">Shahih Bukhari #1</div>
+        <div class="search-form">
+          <form onsubmit="searchByHadithNumber(event)">
+            <input
+              type="number"
+              id="hadithSearchInput"
+              placeholder="Nomor Hadist"
+            />
+            <button type="submit">
+              <i
+                class="fa-solid fa-magnifying-glass"
+                style="color: #ffffff"
+              ></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <hr class="hadith-divider" />
+
+      <!-- Kotak konten hadits -->
+      <div class="hadith-box" id="hadithContainer">Memuat hadits...</div>
+
+      <!-- Tombol Pagination -->
+      <div id="pagination"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
